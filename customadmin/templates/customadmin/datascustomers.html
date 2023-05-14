@@ -1,0 +1,135 @@
+{% extends 'customadmin/theme.html' %}
+
+
+{% block content %}
+<h1 class="container-fluid bg-success text-center" >Customers</h1>
+{% comment %} <div class="container-fluid text-end">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <form action="{% url 'search' %}" method="POST">{% csrf_token %}
+          <input name="search" type="text" class="form-control" id="search" placeholder="Search">
+          <button type="submit" class="btn btn-primary mt-3">Search</button>
+        </form>
+        
+        
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10">
+        <button class="btn btn-info text-end" data-bs-toggle="modal" data-bs-target="#addusers"> Add new user</button>
+
+      </div>
+    </div>
+  </div>
+  
+
+  </div>
+
+  
+</div>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            <span class="text-danger">{{ message }}</span>
+        </div>
+    {% endfor %}
+{% endif %} {% endcomment %}
+
+
+{% comment %} <div>
+  <h3>{{popup}}</h3>
+  {% for i in obj1  %}
+  <h4>{{i.username}}</h4>
+  <h4>{{i.email}}</h4>
+  
+  {% endfor %}
+</div> {% endcomment %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-10 text-center">
+      <table class="table">
+        <thead>
+          <tr>
+            {% comment %} <th scope="col">Sl.No</th> {% endcomment %}
+            <th scope="col">Sl.NO</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact Number</th>
+            <th scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in cr2  %}
+          <tr>
+            {% comment %} <th scope="row">{{item.id}}</th> {% endcomment %}
+            <td>{{item.id}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.phonenumber}}</td>
+            <td>{{item.address}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+    </div>
+    
+
+  </div>
+  
+
+</div>
+
+
+  {% comment %} adding datas {% endcomment %}
+  {% comment %} <h3>ADD USERS</h3> {% endcomment %}
+
+
+
+
+
+
+
+
+{% comment %} chumma update {% endcomment %}
+
+{% comment %} <h2>Update</h2>
+  
+<form method="POST" action="{% url 'update' %}"> {% csrf_token %}
+   
+  
+  <div class="form-group">
+    <label for="id">Id</label>
+    <input  name="id" type="text" class="form-control" id="id" placeholder="Enter id">
+  </div>
+  <div class="form-group">
+    <label for="username">Name</label>
+    <input  name="username" type="text" class="form-control" id="username" placeholder="Enter username">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input  name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword">Password</label>
+    <input name="password" type="password" class="form-control" id="inputPassword" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="inputConfirmPassword">Confirm Password</label>
+    <input name="cpassword" type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Sign Up</button>
+
+</form> {% endcomment %}
+
+
+
+
+
+{% endblock content %}

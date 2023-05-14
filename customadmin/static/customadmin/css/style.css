@@ -1,0 +1,32 @@
+.home{
+    background-image: url("https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.adminlogin{
+    background-color: lightgreen;
+   
+}
+.adminlogin2
+{
+    background-image: url("https://wallpaperset.com/w/full/f/f/4/203539.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.customer
+{
+    background-image: url("https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg");
+}
+.customerhome
+{
+    background-image: url("https://img.freepik.com/free-vector/vibrant-summer-ombre-background-vector_53876-105765.jpg?size=626&ext=jpg&ga=GA1.2.1663485807.1678257680&semt=ais");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dashboard
+{
+    background-color: rgb(198, 126, 17);
+}
